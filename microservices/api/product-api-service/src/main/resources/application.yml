@@ -4,7 +4,7 @@ server:
 spring:
   oauth2:
     resource:
-      userInfoUri: http://localhost:9999/uaa/user
+      userInfoUri: http://192.168.0.08:9999/uaa/user
 
 management:
   security:
