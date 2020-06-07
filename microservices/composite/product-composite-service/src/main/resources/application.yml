@@ -4,9 +4,12 @@ server:
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
+    preferIpAddress: true
     metadataMap:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
   client:
+    serviceUrl:
+      defaultZone: http://192.168.0.08:8761/eureka/
 #    region: default
     registryFetchIntervalSeconds: 5
 #    availabilityZones:

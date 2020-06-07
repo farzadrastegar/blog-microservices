@@ -17,6 +17,8 @@ logging:
 
 eureka:
   client:
+    serviceUrl:
+      defaultZone: http://192.168.0.08:8761/eureka/
     #Region where eureka is deployed -For AWS specify one of the AWS regions, for other datacenters specify a arbitrary string
     #indicating the region.This is normally specified as a -D option (eg) -Deureka.region=us-east-1
     region: default
@@ -35,3 +37,4 @@ eureka:
   instance:
     #Virtual host name by which the clients identifies this service
     virtualHostName: ${spring.application.name}
+    preferIpAddress: true
